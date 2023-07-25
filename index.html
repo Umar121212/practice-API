@@ -7,21 +7,27 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="search-place">
-        <input type="text" placeholder="write the name of the movie" class="search">
-        <input type="submit" class="search-btn" value="Поиск">
-    </div>
-    <div class="content">
-        <div class="movie-page">
-            <h1 class="title"></h1>
-            <span class="year"></span>
-            <p class="plot"></p>
+    <div class="wrapper">
+        <div class="container">
+            <div class="search-place">
+            <input type="text" placeholder="write the name of the movie" class="search">
+            <input type="submit" class="search-btn" value="Поиск">
         </div>
-        <div class="img-poster">
-            <img src="" alt="" id="poster" />
+        <div class="content">
+            <div class="movie-page">
+                <h1 class="title"></h1>
+                <span class="year"></span>
+                <p class="plot"></p>
+            </div>
+            <div class="img-poster">
+                <img src="" alt="" id="poster">
+            </div>
+        </div>
         </div>
     </div>
+    <div class="buttonBox">
+        <input type="color" class="colorpicker">
+        <button id="switch-btn" class="switch">wall</button>
     </div>
     <script src="./index.js"></script>
 </body>

@@ -7,19 +7,36 @@
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    background-image: url(https://images3.alphacoders.com/106/1061210.jpg);
+}
+
+.backgroundWallpapper {
+    transition: 0.5s;
+    background-image: url(./img/Lotr.webp); 
+}
+
+.dark {
+    background-color: black;
+    color: white;
 
 }
+
 .container {
     width: 980px;
     height: 580px;
     margin-top: 20px;
+    margin-bottom: 20px;
     justify-content: center;
     align-items: center;
     border: 1px solid gray;
     border-radius: 32px;
     box-shadow: 2px 3px 7px;
     background-color: #F5F5DC;
+    opacity: 0.8;
     
 }
 
@@ -68,6 +85,13 @@ body {
 
 }
 
+.search-btn:hover {
+    background-color: #744646;
+    width: 62px;
+    height: 36px;
+    transition: 0.4s;
+}
+
 h1 {
     display: flex;
     flex-shrink: 0;
@@ -88,5 +112,38 @@ h1 {
     width: 460px;
     font-size: 20px;
     margin-top: 20px;
+}
+
+.buttonBox {
+    width: 980px;
+    height: 75px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.colorpicker {
+    width: 82px;
+    height: 36px;
+    border-radius: 5px;
+    margin: auto 0;
+}
+
+#switch-btn {
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    height: 75px;
+    border-radius: 50px;
+    background-color: #D9CFA2;
+    color: white;
+    box-shadow: 7px 3px 7px gray;
+    text-transform: none;
+}
+
+#switch-btn:hover {
+    background-color: #3B3838;
+    transition: 0.4s;
+    width: 85px;
+    height: 85px;
 }
 

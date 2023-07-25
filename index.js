@@ -10,7 +10,7 @@ let photoMovie = document.getElementById('poster')
 function getMovieInfo(title) {
     let api_key = "9992f4a5";
     let url = "http://www.omdbapi.com/?apikey=" + api_key + "&t=" + title;
-  
+  //Переделать на Async await
     return fetch(url)
       .then(function (response) {
         return response.json();
@@ -38,7 +38,8 @@ const searchBtn = document.querySelector('.search-btn')
   searchBtn.addEventListener('click', () => {
     let titleMovie = document.querySelector('.search').value
     getMovieInfo(titleMovie)
-    .then(movieInfo => {
+      //Переделать на Async await
+    .then(movieInfo => { 
       createMoviePage(movieInfo)
     })
     .catch(error=> {
@@ -48,3 +49,20 @@ const searchBtn = document.querySelector('.search-btn')
   })
 
 
+//Theme function 
+const wallpapper = document.querySelector('body');
+const wallButton = document.getElementById('switch-btn')
+
+wallButton.addEventListener('click', () => {
+  wallpapper.classList.toggle('backgroundWallpapper')
+})
+
+//Box color function 
+const colorpicker = document.querySelector('.colorpicker');
+const containerBox = document.querySelector('.container')
+
+colorpicker.addEventListener('change', (event) => {
+  const colorSelect = event.target.value;
+  containerBox.style.backgroundColor = colorSelect;
+  
+})
